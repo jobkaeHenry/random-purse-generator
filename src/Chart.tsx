@@ -20,7 +20,7 @@ export const Chart = ({
 }: Props) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [ctx, setCtx] = useState<null | CanvasRenderingContext2D>(null);
-  const [magnifyLevel, setMagnifyLevel] = useState(defaultMagnificationLevel);
+  const [magnifyLevel, setMagnifyLevel] = useState<number>(defaultMagnificationLevel);
 
   const memoiedArr = useMemo(() => data, [data]);
 
